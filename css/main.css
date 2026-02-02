@@ -181,16 +181,16 @@ h6 {
     font-size: 1.15rem;
     font-weight: 800;
     letter-spacing: 0.5px;
-    color: #0c1a30;
-    /* Changed from yellow to blue as requested */
+    color: var(--primary);
+    /* High-contrast Yellow */
     text-transform: uppercase;
 }
 
 .navbar-brand .brand-line-2 {
     font-size: 0.85rem;
     font-weight: 700;
-    color: #0c1a30;
-    /* Keep this blue as requested */
+    color: var(--secondary);
+    /* Dark Navy for background balance */
     letter-spacing: 1px;
 }
 
@@ -712,17 +712,25 @@ h6 {
 .service-banner h1,
 .service-banner h2,
 .service-banner .display-4,
+.blog-banner h1,
+.about-banner h1,
+.contact-banner h1,
+.assessment-banner h1 {
+    color: var(--primary) !important;
+    /* Standout Yellow on Dark Backgrounds */
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    font-weight: 800;
+}
+
 .service-banner .breadcrumb-item a,
 .service-banner .breadcrumb-item.active,
-.blog-banner h1,
 .blog-banner .breadcrumb-item,
 .blog-banner .breadcrumb-item a,
-.about-banner h1,
 .about-banner .breadcrumb-item,
 .about-banner .breadcrumb-item a {
     color: #FFFFFF !important;
-    /* Force white on dark overlays for readability */
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    /* Pure white for hierarchy */
+    font-weight: 600;
 }
 
 .service-banner .breadcrumb-item+.breadcrumb-item::before,
@@ -818,53 +826,75 @@ h6 {
 
 @media (max-width: 768px) {
     .section-padding {
-        padding: 60px 0;
+        padding: 50px 0;
     }
 
     .hero-section {
-        min-height: 80vh;
-    }
-
-    .stats-number {
-        font-size: 2.5rem;
+        min-height: 70vh;
     }
 
     .display-4 {
-        font-size: 2rem !important;
+        font-size: 2.2rem !important;
     }
 
     .display-3 {
-        font-size: 2.5rem !important;
+        font-size: 2.8rem !important;
+    }
+
+    .navbar-brand .brand-line-1 {
+        font-size: 0.95rem !important;
+    }
+
+    .navbar-brand .brand-line-2 {
+        font-size: 0.75rem !important;
     }
 }
 
 @media (max-width: 576px) {
-    .stats-card {
-        padding: 1.5rem 1rem;
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-    .stats-number {
-        font-size: 2rem;
-    }
-
-    .map-container {
-        height: 300px !important;
-    }
-
-    .contact-box {
-        padding: 25px 15px;
-    }
-
-    .contact-banner,
-    .about-banner,
+    .service-banner,
     .blog-banner,
-    .service-banner {
-        padding: 120px 0 60px !important;
+    .about-banner,
+    .contact-banner,
+    .assessment-banner {
+        padding: 100px 0 50px !important;
     }
 
-    iframe {
-        height: 500px !important;
+    .service-banner h1,
+    .blog-banner h1,
+    .about-banner h1,
+    .contact-banner h1,
+    .assessment-banner h1 {
+        font-size: 1.8rem !important;
     }
+
+    .btn-premium {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+height: 300px !important;
+}
+
+.contact-box {
+    padding: 25px 15px;
+}
+
+.contact-banner,
+.about-banner,
+.blog-banner,
+.service-banner {
+    padding: 120px 0 60px !important;
+}
+
+iframe {
+    height: 500px !important;
+}
 }
 
 /* ========================================
