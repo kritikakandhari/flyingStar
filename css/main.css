@@ -836,3 +836,44 @@ h6 {
         opacity: 1;
     }
 }
+
+/* ========================================
+   STICKY ENQUIRE BUTTON
+   ======================================== */
+.sticky-enquire-btn {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    background: #ff0000;
+    /* Bright red as in screenshot */
+    color: white;
+    padding: 15px 8px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 8px 0 0 8px;
+    text-decoration: none;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    box-shadow: -2px 0 15px rgba(0, 0, 0, 0.2);
+    transition: var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sticky-enquire-btn:hover {
+    background: #cc0000;
+    color: white;
+    padding-right: 12px;
+}
+
+@media (max-width: 768px) {
+    .sticky-enquire-btn {
+        padding: 12px 6px;
+        font-size: 12px;
+    }
+}
