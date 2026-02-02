@@ -720,8 +720,9 @@ h6 {
 .about-banner h1,
 .about-banner .breadcrumb-item,
 .about-banner .breadcrumb-item a {
-    color: var(--secondary) !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #FFFFFF !important;
+    /* Force white on dark overlays for readability */
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .service-banner .breadcrumb-item+.breadcrumb-item::before,
