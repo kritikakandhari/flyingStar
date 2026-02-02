@@ -229,36 +229,31 @@ h6 {
    ======================================== */
 
 .btn-premium {
-    background: var(--brand-yellow);
-    border: 2px solid var(--brand-yellow);
-    color: var(--secondary) !important;
-    padding: 12px 28px;
-    font-weight: 800;
-    font-size: 0.85rem;
-    border-radius: var(--radius-full);
-    transition: var(--transition-base);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
-    display: inline-flex;
+    background: #ffc107 !important;
+    /* Force Sky Axis Yellow */
+    border: 2px solid #ffc107 !important;
+    color: #0a1d37 !important;
+    /* Force Navy Text */
+    padding: 12px 28px !important;
+    font-weight: 800 !important;
+    font-size: 0.85rem !important;
+    border-radius: 50px !important;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4) !important;
+    display: inline-flex !important;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-decoration: none !important;
 }
 
 .btn-premium:hover {
-    background: #e6af00;
-    border-color: #e6af00;
-    color: var(--secondary) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 193, 7, 0.6);
-}
-
-.btn-premium:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 193, 7, 0.6);
-    color: var(--secondary);
-    background: #ffca2c;
+    background: #e6af00 !important;
+    border-color: #e6af00 !important;
+    color: #0a1d37 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(255, 193, 7, 0.6) !important;
 }
 
 .btn-outline {
