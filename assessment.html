@@ -1,0 +1,538 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Free Canadian Immigration Assessment - Flying Star Immigration Services Inc. Get your profile evaluated by experts.">
+    <title>Free Assessment | Flying Star Immigration</title>
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css?v=1.1">
+
+    <style>
+        .assessment-banner {
+            background: linear-gradient(rgba(10, 29, 55, 0.85), rgba(10, 29, 55, 0.9)), url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1500');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0 100px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .assessment-form-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(10, 29, 55, 0.1);
+            padding: 40px;
+            margin-top: -80px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .step-indicator::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #e9ecef;
+            z-index: 0;
+        }
+
+        .step {
+            width: 35px;
+            height: 35px;
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #adb5bd;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .step.active {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: var(--secondary);
+        }
+
+        .step.completed {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: var(--secondary);
+        }
+
+        .form-step {
+            display: none;
+        }
+
+        .form-step.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 8px;
+        }
+
+        .form-control,
+        .form-select {
+            padding: 12px 15px;
+            border-radius: 10px;
+            border: 1px solid #dee2e6;
+            margin-bottom: 20px;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+        }
+
+        .btn-step {
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-next {
+            background: var(--primary);
+            color: var(--secondary);
+            border: none;
+        }
+
+        .btn-next:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-prev {
+            background: #f8f9fa;
+            color: var(--secondary);
+            border: 1px solid #dee2e6;
+            margin-right: 15px;
+        }
+
+        .success-message {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .success-icon {
+            font-size: 60px;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="airplane-center">
+            <img src="images/custom-plane.png" alt="Flying Star Plane" class="airplane-img">
+            <div class="loading-dots-simple">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo.jpg" alt="Flying Star Immigration" class="me-2"
+                    style="height: 45px; width: auto;">
+                <div class="brand-text">
+                    <span class="brand-line-1">Flying Star Immigration</span>
+                    <span class="brand-line-2">Services Inc.</span>
+                </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars" style="color: var(--primary);"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown">Our
+                            Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services/study-visa.html">Study Visa</a></li>
+                            <li><a class="dropdown-item" href="services/permanent-residency.html">Permanent
+                                    Residence</a></li>
+                            <li><a class="dropdown-item" href="services/visitor-visa.html">Visitor Visa</a></li>
+                            <li><a class="dropdown-item" href="services/tourist-visa.html">Tourist Visa</a></li>
+                            <li><a class="dropdown-item" href="services/work-permit.html">Work Permit</a></li>
+                            <li><a class="dropdown-item" href="services/spousal-sponsorship.html">Spousal
+                                    Sponsorship</a></li>
+                            <li><a class="dropdown-item" href="services/express-entry.html">Express Entry</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link px-3" href="about-us.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="blogs.html">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 active" href="assessment.html">Assessment</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="contact-us.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-premium" href="book-appointment.html">Book Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <div class="assessment-banner">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold mb-3" data-aos="fade-down">Free Assessment</h1>
+            <p class="lead opacity-90" data-aos="fade-up" data-aos-delay="200">Start your Canadian journey today with a
+                detailed profile evaluation.</p>
+        </div>
+    </div>
+
+    <!-- Form Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="assessment-form-container" data-aos="fade-up">
+                        <!-- Step Indicators -->
+                        <div class="step-indicator">
+                            <div class="step active" data-step="1">1</div>
+                            <div class="step" data-step="2">2</div>
+                            <div class="step" data-step="3">3</div>
+                            <div class="step" data-step="4">4</div>
+                        </div>
+
+                        <form id="assessmentForm">
+                            <!-- Step 1: Personal Details -->
+                            <div class="form-step active" id="step1">
+                                <h3 class="fw-bold mb-4">Personal Information</h3>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Full Name*</label>
+                                        <input type="text" class="form-control" name="name" required
+                                            placeholder="John Doe">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Email Address*</label>
+                                        <input type="email" class="form-control" name="email" required
+                                            placeholder="john@example.com">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Phone Number*</label>
+                                        <input type="tel" class="form-control" name="phone" required
+                                            placeholder="+1 (555) 000-0000">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Age*</label>
+                                        <input type="number" class="form-control" name="age" required placeholder="25">
+                                    </div>
+                                </div>
+                                <div class="text-end mt-4">
+                                    <button type="button" class="btn btn-step btn-next" onclick="nextStep(2)">Next Step
+                                        <i class="fas fa-arrow-right ms-2"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Education & Work -->
+                            <div class="form-step" id="step2">
+                                <h3 class="fw-bold mb-4">Education & Work Experience</h3>
+                                <div class="mb-3">
+                                    <label class="form-label">Highest Level of Education*</label>
+                                    <select class="form-select" name="education" required>
+                                        <option value="">Select Education</option>
+                                        <option value="high-school">High School</option>
+                                        <option value="diploma">Diploma (2+ years)</option>
+                                        <option value="bachelors">Bachelor's Degree</option>
+                                        <option value="masters">Master's Degree</option>
+                                        <option value="phd">Doctorate (PhD)</option>
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Years of Work Experience*</label>
+                                        <select class="form-select" name="experience" required>
+                                            <option value="">Select Experience</option>
+                                            <option value="0-1">Less than 1 year</option>
+                                            <option value="1-2">1 - 2 years</option>
+                                            <option value="3-5">3 - 5 years</option>
+                                            <option value="6plus">6+ years</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Current Occupation</label>
+                                        <input type="text" class="form-control" name="occupation"
+                                            placeholder="Software Engineer">
+                                    </div>
+                                </div>
+                                <div class="text-end mt-4">
+                                    <button type="button" class="btn btn-step btn-prev" onclick="nextStep(1)"><i
+                                            class="fas fa-arrow-left me-2"></i> Back</button>
+                                    <button type="button" class="btn btn-step btn-next" onclick="nextStep(3)">Next Step
+                                        <i class="fas fa-arrow-right ms-2"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Language & Family -->
+                            <div class="form-step" id="step3">
+                                <h3 class="fw-bold mb-4">Language & Family Status</h3>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">IELTS/CELPIP Taken?*</label>
+                                        <select class="form-select" name="language_test" required>
+                                            <option value="">Select Option</option>
+                                            <option value="yes">Yes</option>
+                                            <option value="no">No, planning soon</option>
+                                            <option value="not-sure">Not sure</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Average Band Score (if taken)</label>
+                                        <input type="text" class="form-control" name="test_score"
+                                            placeholder="e.g., 7.5">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Marital Status*</label>
+                                        <select class="form-select" name="marital_status" required>
+                                            <option value="">Select Option</option>
+                                            <option value="single">Single</option>
+                                            <option value="married">Married / Common-law</option>
+                                            <option value="divorced">Divorced / Separated</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Destination in Canada</label>
+                                        <select class="form-select" name="destination">
+                                            <option value="not-decided">Not Decided</option>
+                                            <option value="ontario">Ontario</option>
+                                            <option value="bc">British Columbia</option>
+                                            <option value="alberta">Alberta</option>
+                                            <option value="other">Other Provinces</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="text-end mt-4">
+                                    <button type="button" class="btn btn-step btn-prev" onclick="nextStep(2)"><i
+                                            class="fas fa-arrow-left me-2"></i> Back</button>
+                                    <button type="button" class="btn btn-step btn-next" onclick="nextStep(4)">Next Step
+                                        <i class="fas fa-arrow-right ms-2"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Step 4: Final Review -->
+                            <div class="form-step" id="step4">
+                                <h3 class="fw-bold mb-4">Final Submission</h3>
+                                <div class="mb-3">
+                                    <label class="form-label">Are you already in Canada?</label>
+                                    <select class="form-select" name="in_canada">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Additional Message (Optional)</label>
+                                    <textarea class="form-control" name="message" rows="4"
+                                        placeholder="Tell us more about your target program or any specific questions..."></textarea>
+                                </div>
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="terms" required checked>
+                                    <label class="form-check-label small text-dim" for="terms">
+                                        I agree to be contacted by Flying Star Immigration regarding my assessment and
+                                        understand the terms of service.
+                                    </label>
+                                </div>
+                                <div class="text-end mt-4">
+                                    <button type="button" class="btn btn-step btn-prev" onclick="nextStep(3)"><i
+                                            class="fas fa-arrow-left me-2"></i> Back</button>
+                                    <button type="submit" class="btn btn-step btn-next">Submit Assessment <i
+                                            class="fas fa-paper-plane ms-2"></i></button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- Success State -->
+                        <div id="successState" style="display: none;">
+                            <div class="success-message">
+                                <i class="fas fa-check-circle success-icon"></i>
+                                <h2 class="fw-bold mb-3">Assessment Received!</h2>
+                                <p class="text-dim fs-5 mb-4">Thank you for choosing Flying Star Immigration. Our
+                                    experts will review your profile and contact you within 24-48 business hours.</p>
+                                <a href="index.html" class="btn btn-premium">Return Home</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-info">
+                        <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                            <img src="images/logo.jpg" alt="Flying Star" style="height: 40px;">
+                            <div class="brand-text text-white">
+                                <span class="brand-line-1 d-block">Flying Star Immigration</span>
+                                <span class="brand-line-2 d-block">Services Inc.</span>
+                            </div>
+                        </a>
+                        <p class="mb-4 text-dim">Empowering your Canadian dreams with expert guidance and unwavering
+                            integrity since 2022.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="blogs.html">Immigration Blogs</a></li>
+                        <li><a href="assessment.html">Free Assessment</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white fw-bold mb-4">Our Services</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="services/study-visa.html">Study Visa</a></li>
+                        <li><a href="services/permanent-residency.html">Permanent Residence</a></li>
+                        <li><a href="services/visitor-visa.html">Visitor Visa</a></li>
+                        <li><a href="services/tourist-visa.html">Tourist Visa</a></li>
+                        <li><a href="services/work-permit.html">Work Permit</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white fw-bold mb-4">Contact Info</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Brampton, Ontario, Canada</p>
+                        <p><i class="fas fa-phone-alt"></i> +1 (647) 505-1902</p>
+                        <p><i class="fas fa-envelope"></i> info@flyingstarimmigration.com</p>
+                        <p><i class="fas fa-clock"></i> Mon - Fri: 9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom mt-5 pt-4 border-top border-secondary opacity-50 text-center">
+                <p class="mb-0">&copy; 2026 Flying Star Immigration Services Inc. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Preloader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const preloader = document.getElementById('preloader');
+                preloader.classList.add('fade-out');
+                setTimeout(() => { preloader.style.display = 'none'; }, 500);
+            }, 1000);
+        });
+
+        // Multi-step form logic
+        function nextStep(step) {
+            // Hide all steps
+            document.querySelectorAll('.form-step').forEach(el => el.classList.remove('active'));
+            // Show target step
+            document.getElementById('step' + step).classList.add('active');
+
+            // Update indicators
+            document.querySelectorAll('.step').forEach((el, index) => {
+                if (index + 1 < step) {
+                    el.classList.add('completed');
+                    el.classList.remove('active');
+                } else if (index + 1 === step) {
+                    el.classList.add('active');
+                    el.classList.remove('completed');
+                } else {
+                    el.classList.remove('active', 'completed');
+                }
+            });
+
+            // Scroll to top of form
+            document.querySelector('.assessment-form-container').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Form submission
+        document.getElementById('assessmentForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // In a real app, you'd send data via fetch/XHR here
+            document.getElementById('assessmentForm').style.display = 'none';
+            document.querySelector('.step-indicator').style.display = 'none';
+            document.getElementById('successState').style.display = 'block';
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) navbar.classList.add('navbar-scrolled');
+            else navbar.classList.remove('navbar-scrolled');
+        });
+    </script>
+</body>
+
+</html>
