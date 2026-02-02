@@ -256,7 +256,13 @@
                             <div class="step" data-step="4">4</div>
                         </div>
 
-                        <form id="assessmentForm">
+                        <form id="assessmentForm" action="https://formsubmit.co/Info.flyingstarimmigration@gmail.com"
+                            method="POST">
+                            <!-- FormSubmit Configuration -->
+                            <input type="hidden" name="_subject" value="New Assessment Form Submission!">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="text" name="_honey" style="display:none">
                             <!-- Step 1: Personal Details -->
                             <div class="form-step active" id="step1">
                                 <h3 class="fw-bold mb-4">Personal Information</h3>
@@ -495,6 +501,13 @@
 
         // Multi-step form logic
         function nextStep(step) {
+            const currentStep = step > 1 ? step - 1 : 1;
+
+            // Validate if moving forward
+            if (step > currentStep) {
+                if (!validateStep(currentStep)) return;
+            }
+
             // Hide all steps
             document.querySelectorAll('.form-step').forEach(el => el.classList.remove('active'));
             // Show target step
@@ -517,13 +530,71 @@
             document.querySelector('.assessment-form-container').scrollIntoView({ behavior: 'smooth' });
         }
 
+        function validateStep(step) {
+            const stepEl = document.getElementById('step' + step);
+            const inputs = stepEl.querySelectorAll('[required]');
+            let valid = true;
+
+            inputs.forEach(input => {
+                if (!input.value.trim() || (input.type === 'checkbox' && !input.checked)) {
+                    valid = false;
+                    input.classList.add('is-invalid');
+                } else {
+                    input.classList.remove('is-invalid');
+                    input.classList.add('is-valid');
+                }
+            });
+
+            if (!valid) {
+                // Shake effect or alert could go here
+                const firstInvalid = stepEl.querySelector('.is-invalid');
+                if (firstInvalid) firstInvalid.focus();
+            }
+
+            return valid;
+        }
+
         // Form submission
         document.getElementById('assessmentForm').addEventListener('submit', function (e) {
+            if (!validateStep(4)) {
+                e.preventDefault();
+                return;
+            }
+            // FormSubmit will handle the redirect if we don't preventDefault
+            // But we want to show a success state without a page reload if possible
+            // Actually, FormSubmit standard behavior is a redirect. 
+            // Let's use AJAX for a cleaner feel.
+
             e.preventDefault();
-            // In a real app, you'd send data via fetch/XHR here
-            document.getElementById('assessmentForm').style.display = 'none';
-            document.querySelector('.step-indicator').style.display = 'none';
-            document.getElementById('successState').style.display = 'block';
+            const form = e.target;
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('button[type="submit"]');
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Submitting...';
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    document.getElementById('assessmentForm').style.display = 'none';
+                    document.querySelector('.step-indicator').style.display = 'none';
+                    document.getElementById('successState').style.display = 'block';
+                    document.querySelector('.assessment-form-container').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    alert('Oops! There was a problem submitting your form. Please try again.');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'Submit Assessment <i class="fas fa-paper-plane ms-2"></i>';
+                }
+            }).catch(error => {
+                alert('Oops! There was a problem submitting your form. Please try again.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Submit Assessment <i class="fas fa-paper-plane ms-2"></i>';
+            });
         });
 
         // Navbar scroll effect
