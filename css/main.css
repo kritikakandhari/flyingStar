@@ -4,14 +4,13 @@
 
 :root {
     /* Modern Blue & Yellow Theme */
-    --primary: #0047AB;
-    /* Cobalt Blue */
-    --brand-yellow: #FFC107;
-    /* Amber/Yellow for Accents */
-    --secondary: #0B1120;
-    /* Dark Navy (instead of Black) */
-    --accent: #FFFFFF;
-    /* White */
+    --primary: #0056b3;
+    /* Vibrant Blue from Sky Axis */
+    --primary-dark: #003d7a;
+    --primary-light: #e7f1ff;
+    --secondary: #0a192f;
+    --accent: #ffcc00;
+    --accent-vibrant: #ff0000;
     --success: #10B981;
     /* Emerald */
     --danger: #DC2626;
@@ -145,9 +144,31 @@ h6 {
     perspective: 1000px;
 }
 
-.card-3d:hover {
-    transform: translateY(-10px) rotateX(5deg);
-    box-shadow: 0 30px 60px -12px rgba(79, 70, 229, 0.3);
+.navbar-brand .brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.1;
+}
+
+.navbar-brand .brand-line-1 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+.navbar-brand .brand-line-2 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: 1px;
+}
+
+.navbar-brand:hover .brand-line-1,
+.navbar-brand:hover .brand-line-2 {
+    color: var(--primary-dark);
 }
 
 .feature-card-premium {
