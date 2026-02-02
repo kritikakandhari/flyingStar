@@ -449,7 +449,8 @@ h6 {
 /* Global Service Banner & Banner Animations */
 .service-banner,
 .about-banner,
-.blog-banner {
+.blog-banner,
+.hero-slide {
     position: relative;
     overflow: hidden;
 }
@@ -467,26 +468,27 @@ h6 {
 .banner-decor .circle {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-    filter: blur(40px);
-    animation: floating 15s infinite alternate ease-in-out;
+    background: rgba(255, 255, 255, 0.18);
+    filter: blur(60px);
+    animation: floating 25s infinite alternate ease-in-out;
+    mix-blend-mode: plus-lighter;
 }
 
 .circle-1 {
-    width: 300px;
-    height: 300px;
-    top: -100px;
-    left: -100px;
+    width: 450px;
+    height: 450px;
+    top: -150px;
+    left: -150px;
     animation-delay: 0s;
 }
 
 .circle-2 {
-    width: 400px;
-    height: 400px;
-    bottom: -150px;
-    right: -50px;
+    width: 600px;
+    height: 600px;
+    bottom: -200px;
+    right: -100px;
     animation-delay: -5s;
-    background: rgba(227, 30, 36, 0.03) !important;
+    background: rgba(227, 30, 36, 0.15) !important;
 }
 
 .circle-3 {
@@ -513,7 +515,8 @@ h6 {
 
 .service-banner .container,
 .about-banner .container,
-.blog-banner .container {
+.blog-banner .container,
+.hero-slide .container {
     position: relative;
     z-index: 5;
 }
