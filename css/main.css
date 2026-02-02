@@ -919,12 +919,12 @@ h6 {
 }
 
 @media (max-width: 991px) {
-    .navbar-brand span {
-        font-size: 0.85rem !important;
-        white-space: normal;
-        max-width: 180px;
-        line-height: 1.2;
-        display: block;
+    .navbar-brand .brand-line-1 {
+        font-size: 0.95rem !important;
+    }
+
+    .navbar-brand .brand-line-2 {
+        font-size: 0.75rem !important;
     }
 
     .navbar-brand img {
@@ -933,9 +933,12 @@ h6 {
 }
 
 @media (max-width: 480px) {
-    .navbar-brand span {
-        font-size: 0.75rem !important;
-        max-width: 140px;
+    .navbar-brand .brand-line-1 {
+        font-size: 0.85rem !important;
+    }
+
+    .navbar-brand .brand-line-2 {
+        font-size: 0.65rem !important;
     }
 
     .service-icon {
