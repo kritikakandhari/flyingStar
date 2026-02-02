@@ -3,24 +3,25 @@
    ======================================== */
 
 :root {
-    /* Modern Light Color Palette */
-    /* Red, Black & White Theme */
-    --primary: #E31E24;
-    /* Bold Red */
-    --secondary: #111111;
-    /* Pure Black */
+    /* Modern Blue & Yellow Theme */
+    --primary: #0047AB;
+    /* Cobalt Blue */
+    --brand-yellow: #FFC107;
+    /* Amber/Yellow for Accents */
+    --secondary: #0B1120;
+    /* Dark Navy (instead of Black) */
     --accent: #FFFFFF;
     /* White */
     --success: #10B981;
     /* Emerald */
     --danger: #DC2626;
-    /* Darker Red */
+    /* Red for Errors */
 
     /* Backgrounds */
     --bg-primary: #F8FAFC;
     /* Light Gray */
-    --bg-secondary: #F1F5F9;
-    /* Slate 100 */
+    --bg-secondary: #F0F9FF;
+    /* Very Light Blue */
     --bg-white: #FFFFFF;
 
     /* Text Colors */
