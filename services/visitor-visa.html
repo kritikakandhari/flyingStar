@@ -157,14 +157,42 @@
                 <div class="col-lg-4" data-aos="fade-left">
                     <div class="glass-card sticky-top" style="top: 100px;">
                         <h4 class="fw-bold mb-4">Apply for Visa</h4>
-                        <form>
+                        <h4 class="fw-bold mb-4">Book Free Consultation</h4>
+                        <p class="text-dim small mb-4">Get expert advice for your visit.</p>
+                        <form action="https://formsubmit.co/Info.flyingstarimmigration@gmail.com" method="POST">
+                            <input type="hidden" name="_subject" value="New Visitor Visa Enquiry">
                             <div class="mb-3">
-                                <input type="text" class="form-control bg-light" placeholder="Your Name">
+                                <label class="form-label small fw-bold">Your Name</label>
+                                <input type="text" name="name" class="form-control bg-light" placeholder="Full Name"
+                                    required>
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control bg-light" placeholder="Purpose of Visit">
+                                <label class="form-label small fw-bold">Email Address</label>
+                                <input type="email" name="email" class="form-control bg-light"
+                                    placeholder="name@example.com" required>
                             </div>
-                            <button class="btn btn-premium w-100">Get a Quote</button>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">Phone Number</label>
+                                <input type="tel" name="phone" class="form-control bg-light"
+                                    placeholder="+91 XXXXX XXXXX" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">Interested In</label>
+                                <select name="service" class="form-select bg-light">
+                                    <option value="Visitor/Tourist Visa" selected>Visitor/Tourist Visa</option>
+                                    <option value="Study Visa">Study Visa</option>
+                                    <option value="Work Permit">Work Permit</option>
+                                    <option value="Permanent Residence">Permanent Residence</option>
+                                    <option value="Spousal Sponsorship">Spousal Sponsorship</option>
+                                    <option value="Express Entry">Express Entry</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label small fw-bold">Message</label>
+                                <textarea name="message" class="form-control bg-light" rows="3"
+                                    placeholder="Tell us about your query..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-premium w-100 py-3">Send Enquiry</button>
                         </form>
                     </div>
                 </div>
