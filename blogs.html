@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs | Flying Star Immigration</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .blog-banner {
+            background: linear-gradient(rgba(30, 0, 0, 0.9), rgba(0, 0, 0, 0.95)), url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=1500');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0 100px;
+            color: white;
+        }
+
+        .blog-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            background: white;
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-img-wrapper {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .blog-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-card:hover .blog-img-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .blog-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--accent-color);
+            color: #0a192f;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .blog-content {
+            padding: 25px;
+        }
+
+        .blog-date {
+            font-size: 0.85rem;
+            color: #8892b0;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1a1a2e;
+            transition: color 0.3s;
+        }
+
+        .blog-card:hover .blog-title {
+            color: var(--accent-color);
+        }
+
+        .blog-excerpt {
+            color: #555555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            font-weight: 700;
+            text-decoration: none;
+            color: #0a192f;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .read-more i {
+            margin-left: 8px;
+            transition: transform 0.3s;
+        }
+
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo.jpg" alt="Flying Star Immigration" class="me-2"
+                    style="height: 40px; width: auto;">
+                <span class="fw-bold tracking-wider" style="color: var(--primary);">FLYING STAR</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars" style="color: var(--primary);"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown">Our
+                            Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services/study-visa.html">Study Visa</a></li>
+                            <li><a class="dropdown-item" href="services/permanent-residency.html">Permanent
+                                    Residence</a></li>
+                            <li><a class="dropdown-item" href="services/visitor-visa.html">Visitor Visa</a></li>
+                            <li><a class="dropdown-item" href="services/tourist-visa.html">Tourist Visa</a></li>
+                            <li><a class="dropdown-item" href="services/work-permit.html">Work Permit</a></li>
+                            <li><a class="dropdown-item" href="services/spousal-sponsorship.html">Spousal
+                                    Sponsorship</a></li>
+                            <li><a class="dropdown-item" href="services/refusal-appeal.html">Refusal Appeal Case</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link px-3" href="about-us.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 active" href="blogs.html">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="contact-us.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-premium" href="book-appointment.html">Book Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <li><a class="dropdown-item" href="services/visitor-visa.html">Visitor Visa</a></li>
+    <li><a class="dropdown-item" href="services/tourist-visa.html">Tourist Visa</a></li>
+    <li><a class="dropdown-item" href="services/work-permit.html">Work Permit</a></li>
+    <li><a class="dropdown-item" href="services/spousal-sponsorship.html">Spousal
+            Sponsorship</a></li>
+    <li><a class="dropdown-item" href="services/refusal-appeal.html">Refusal Appeal Case</a>
+    </li>
+    </ul>
+    </li>
+    <li class="nav-item"><a class="nav-link px-3 text-dark" href="about-us.html">About</a></li>
+    <li class="nav-item"><a class="nav-link px-3 text-dark active" href="blogs.html">Blogs</a></li>
+    <li class="nav-item"><a class="nav-link px-3 text-dark" href="faq.html">FAQ</a></li>
+    <li class="nav-item"><a class="nav-link px-3 text-dark" href="privacy-policy.html">Privacy
+            Policy</a></li>
+    <li class="nav-item"><a class="nav-link px-3 text-dark" href="contact-us.html">Contact</a></li>
+    <li class="nav-item ms-lg-3">
+        <a class="btn btn-premium" href="book-appointment.html">Book Appointment</a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+
+    <div class="blog-banner">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold mb-4 text-white" data-aos="zoom-out">Insights & Updates</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-warning">Home</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Blogs</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Blogs Grid -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Blog 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="blog-card">
+                        <div class="blog-img-wrapper">
+                            <span class="blog-badge">News</span>
+                            <img src="images/blog_plan_2026.png" alt="Canada Immigration Policy">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date">Feb 01, 2026</span>
+                            <h3 class="blog-title">Canada New Immigration Levels Plan for 2026</h3>
+                            <p class="blog-excerpt">Explore the latest updates on Canada's targets for permanent
+                                residents and how it affects your application.</p>
+                            <a href="blogs/immigration-levels-2026.html" class="read-more">Read Full Story <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-card">
+                        <div class="blog-img-wrapper">
+                            <span class="blog-badge">Student</span>
+                            <img src="images/blog_careers.png" alt="Study in Canada Advice">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date">Jan 28, 2026</span>
+                            <h3 class="blog-title">Top 10 High-Demand Careers for Students in Canada</h3>
+                            <p class="blog-excerpt">Thinking about studying abroad? Discover which courses lead to the
+                                best PR opportunities after graduation.</p>
+                            <a href="blogs/student-careers-canada.html" class="read-more">Read Full Story <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-card">
+                        <div class="blog-img-wrapper">
+                            <span class="blog-badge">Express Entry</span>
+                            <img src="images/blog_crs_boost.png" alt="CRS Score Update">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date">Jan 15, 2026</span>
+                            <h3 class="blog-title">How to Improve Your CRS Score in 2026</h3>
+                            <p class="blog-excerpt">Master the point-based system. Learn active ways to boost your
+                                ranking in the Express Entry pool.</p>
+                            <a href="blogs/improve-crs-score.html" class="read-more">Read Full Story <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 4 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="blog-card">
+                        <div class="blog-img-wrapper">
+                            <span class="blog-badge">Spousal</span>
+                            <img src="images/blog_spousal_tips.png" alt="Family Sponsorship">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date">Jan 05, 2026</span>
+                            <h3 class="blog-title">Common Mistakes in Spousal Sponsorship Applications</h3>
+                            <p class="blog-excerpt">Avoid delays and refusals. We highlight the most critical errors
+                                made during family reunification filings.</p>
+                            <a href="blogs/spousal-sponsorship-mistakes.html" class="read-more">Read Full Story <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 5 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-card">
+                        <div class="blog-img-wrapper">
+                            <span class="blog-badge">Expert Advice</span>
+                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=800"
+                                alt="Visa Interview Prep">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date">Dec 22, 2025</span>
+                            <h3 class="blog-title">A Checklist for Your Canadian Visa Interview</h3>
+                            <p class="blog-excerpt">Confidence is key. Get our expert-approved checklist for preparing
+                                for your next interview at the consulate.</p>
+                            <a href="blogs/visa-interview-checklist.html" class="read-more">Read Full Story <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 6 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-card">
+                        <div class="blog-img-wrapper">
+                            <span class="blog-badge">Lifestyle</span>
+                            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80&w=800"
+                                alt="Life in Canada">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date">Dec 10, 2025</span>
+                            <h3 class="blog-title">Best Cities for New Immigrants in Canada</h3>
+                            <p class="blog-excerpt">From Toronto to Vancouver, find the city that best fits your career
+                                goals and lifestyle preferences.</p>
+                            <a href="blogs/best-cities-immigrants.html" class="read-more">Read Full Story <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-premium">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <h4 class="footer-heading">Flying Star Immigration</h4>
+                    <p class="footer-text-muted mb-4">Your trusted partner for Canadian immigration. We help you reach
+                        for the stars and achieve your destination.</p>
+                    <img src="images/rcic-logo.png" alt="RCIC Certified"
+                        style="max-width: 200px; margin-bottom: 1rem; opacity: 0.9;">
+                    <div class="d-flex gap-2">
+                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about-us.html" class="footer-link">About Us</a>
+                    <a href="contact-us.html" class="footer-link">Contact</a>
+                    <a href="blogs.html" class="footer-link">Blogs</a>
+                    <a href="faq.html" class="footer-link">FAQ</a>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="footer-heading">Services</h5>
+                    <a href="services/study-visa.html" class="footer-link">Study Visa</a>
+                    <a href="services/work-permit.html" class="footer-link">Work Permit</a>
+                    <a href="services/permanent-residency.html" class="footer-link">Permanent Residence</a>
+                    <a href="services/visitor-visa.html" class="footer-link">Visitor Visa</a>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="footer-heading">Contact Info</h5>
+                    <p class="footer-text-muted mb-2"><i class="fas fa-phone me-2"></i> +1 (672) 878-2211</p>
+                    <p class="footer-text-muted mb-2"><i class="fas fa-phone me-2"></i> +1 (587) 664-1271</p>
+                    <p class="footer-text-muted mb-2"><i class="fas fa-envelope me-2"></i> info@flyingstarimmigration.ca
+                    </p>
+                    <p class="footer-text-muted"><i class="fas fa-location-dot me-2"></i> #208, 12885 80 Ave, Surrey, BC
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-top border-secondary py-4 text-center">
+                <p class="small mb-0 footer-text-muted">© 2026 Flying Star Immigration. All rights reserved. <a
+                        href="privacy-policy.html" class="text-decoration-none text-muted ms-2">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+
+</html>

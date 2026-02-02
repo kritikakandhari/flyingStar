@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment | Flying Star Immigration</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .booking-banner {
+            background: linear-gradient(rgba(30, 0, 0, 0.9), rgba(0, 0, 0, 0.95)), url('https://images.unsplash.com/photo-1506784919141-93ac8404bb71?auto=format&fit=crop&q=80&w=1500');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo.jpg" alt="Flying Star Immigration" class="me-2"
+                    style="height: 40px; width: auto;">
+                <span class="fw-bold tracking-wider text-dark">FLYING STAR</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars text-dark"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link px-3 text-dark" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 text-dark" href="about-us.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 text-dark" href="blogs.html">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 text-dark" href="contact-us.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-premium" href="book-appointment.html">Book Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="booking-banner">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3" data-aos="zoom-in">Schedule a Consultation</h1>
+            <p class="lead" data-aos="fade-up">Pick a time that works best for you and speak with our certified experts.
+            </p>
+        </div>
+    </div>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10" data-aos="fade-up">
+                    <!-- TidyCal Embed Starts -->
+                    <div id="tidycal-embed" data-path="infoflyingstarimmigration/30-minute-meeting"></div>
+                    <script src="https://tidycal.com/js/embed.js" async></script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-premium">
+        <div class="container">
+            <div class="row pb-5">
+                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                    <h4 class="fw-bold text-white mb-4">Flying Star Immigration</h4>
+                    <div class="contact-info-footer mb-4">
+                        <p class="small mb-2 footer-text-muted"><i class="fas fa-phone-alt text-warning me-2"></i> +1
+                            (672) 878-2211</p>
+                        <p class="small mb-2 footer-text-muted"><i class="fas fa-phone-alt text-warning me-2"></i> +1
+                            (587) 664-1271</p>
+                        <p class="small mb-2 footer-text-muted"><i class="fas fa-envelope text-warning me-2"></i>
+                            info@flyingstarimmigration.ca</p>
+                        <p class="small mb-0 footer-text-muted"><i class="fas fa-map-marker-alt text-warning me-2"></i>
+                            #208, 12885 80 Ave, Surrey, BC, Canada</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                    <h5 class="footer-heading">Explore Link</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="index.html#services" class="footer-link">Services</a>
+                    <a href="about-us.html" class="footer-link">About Us</a>
+                    <a href="index.html#contact" class="footer-link">Contact Us</a>
+                    <a href="blogs.html" class="footer-link">Blogs</a>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <h5 class="footer-heading">Services</h5>
+                    <a href="services/study-visa.html" class="footer-link">Study Visa</a>
+                    <a href="services/tourist-visa.html" class="footer-link">Tourist Visa</a>
+                    <a href="services/spousal-sponsorship.html" class="footer-link">Spousal Sponsorship</a>
+                    <a href="services/work-permit.html" class="footer-link">Work Permit</a>
+                    <a href="services/refusal-appeal.html" class="footer-link">Refusal Appeal Case</a>
+                    <a href="services/permanent-residency.html" class="footer-link">Permanent Residence</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Countries</h5>
+                    <div class="row g-0">
+                        <div class="col-6">
+                            <a href="#" class="footer-link">Canada</a>
+                            <a href="#" class="footer-link">USA</a>
+                            <a href="#" class="footer-link">UK</a>
+                            <a href="#" class="footer-link">Australia</a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="footer-link">Germany</a>
+                            <a href="#" class="footer-link">France</a>
+                            <a href="#" class="footer-link">Ireland</a>
+                            <a href="#" class="footer-link">Finland</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary py-4 text-center">
+                <p class="small mb-0 footer-text-muted">© 2026 Flying Star Immigration. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+
+</html>
