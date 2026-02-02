@@ -4,13 +4,15 @@
 
 :root {
     /* Modern Blue & Yellow Theme */
-    --primary: #0056b3;
-    /* Vibrant Blue from Sky Axis */
-    --primary-dark: #003d7a;
-    --primary-light: #e7f1ff;
-    --secondary: #0a192f;
-    --accent: #ffcc00;
-    --brand-yellow: #ffcc00;
+    --primary: #0066cc;
+    /* Sky Axis Blue */
+    --primary-dark: #004d99;
+    --primary-light: #f0f7ff;
+    --secondary: #0a1d37;
+    /* Deep Navy from screenshot */
+    --accent: #ffc107;
+    /* Vibrant Yellow from screenshot */
+    --brand-yellow: #ffc107;
     --accent-vibrant: #ff0000;
     --success: #10B981;
     /* Emerald */
@@ -89,9 +91,19 @@ h4,
 h5,
 h6 {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.2;
-    color: var(--text-primary);
+    color: var(--secondary);
+}
+
+.section-subtitle {
+    color: var(--primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+    display: block;
 }
 
 /* ========================================
@@ -255,19 +267,22 @@ h6 {
 }
 
 .btn-outline {
-    background: transparent;
+    background: var(--primary);
     border: 2px solid var(--primary);
-    color: var(--primary);
+    color: white;
     padding: 12px 30px;
     font-weight: 600;
     border-radius: var(--radius-full);
     transition: var(--transition-base);
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.2);
 }
 
 .btn-outline:hover {
-    background: var(--primary);
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
     color: white;
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.3);
 }
 
 /* ========================================
