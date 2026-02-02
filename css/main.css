@@ -451,18 +451,36 @@ h6 {
 .service-banner h2,
 .service-banner .display-4,
 .service-banner .breadcrumb-item,
-.service-banner .breadcrumb-item.active {
+.service-banner .breadcrumb-item a,
+.service-banner .breadcrumb-item.active,
+.blog-banner h1,
+.blog-banner .breadcrumb-item,
+.blog-banner .breadcrumb-item a,
+.about-banner h1,
+.about-banner .breadcrumb-item,
+.about-banner .breadcrumb-item a {
     color: white !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.service-banner .breadcrumb-item+.breadcrumb-item::before {
+.service-banner .breadcrumb-item+.breadcrumb-item::before,
+.blog-banner .breadcrumb-item+.breadcrumb-item::before,
+.about-banner .breadcrumb-item+.breadcrumb-item::before {
     color: rgba(255, 255, 255, 0.7) !important;
 }
 
-/* Force Breadcrumb Colors only (Navbar Brand uses default dark) */
-.breadcrumb-item a {
-    color: white !important;
+/* Breadcrumbs for Light Backgrounds (Blog Posts) */
+.blog-post-header .breadcrumb-item a {
+    color: var(--primary) !important;
+    font-weight: 700;
+}
+
+.blog-post-header .breadcrumb-item.active {
+    color: var(--text-primary) !important;
+}
+
+.blog-post-header .breadcrumb-item+.breadcrumb-item::before {
+    color: rgba(0, 0, 0, 0.2) !important;
 }
 
 /* ========================================
