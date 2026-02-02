@@ -187,8 +187,9 @@ h6 {
 
 .navbar-brand .brand-line-2 {
     font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--secondary);
+    font-weight: 700;
+    color: #0c1a30;
+    /* Keep this blue as requested */
     letter-spacing: 1px;
 }
 
