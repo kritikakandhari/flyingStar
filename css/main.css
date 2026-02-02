@@ -446,11 +446,82 @@ h6 {
     transform: rotateY(360deg) scale(1.1);
 }
 
+/* Global Service Banner & Banner Animations */
+.service-banner,
+.about-banner,
+.blog-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.banner-decor .circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    filter: blur(40px);
+    animation: floating 15s infinite alternate ease-in-out;
+}
+
+.circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+    animation-delay: 0s;
+}
+
+.circle-2 {
+    width: 400px;
+    height: 400px;
+    bottom: -150px;
+    right: -50px;
+    animation-delay: -5s;
+    background: rgba(227, 30, 36, 0.03) !important;
+}
+
+.circle-3 {
+    width: 250px;
+    height: 250px;
+    top: 10%;
+    right: 20%;
+    animation-delay: -10s;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(30px, 40px) scale(1.1);
+    }
+
+    100% {
+        transform: translate(-20px, -30px) scale(0.9);
+    }
+}
+
+.service-banner .container,
+.about-banner .container,
+.blog-banner .container {
+    position: relative;
+    z-index: 5;
+}
+
 /* Global Service Banner Heading & Text Fix */
 .service-banner h1,
 .service-banner h2,
 .service-banner .display-4,
-.service-banner .breadcrumb-item,
 .service-banner .breadcrumb-item a,
 .service-banner .breadcrumb-item.active,
 .blog-banner h1,
@@ -460,7 +531,7 @@ h6 {
 .about-banner .breadcrumb-item,
 .about-banner .breadcrumb-item a {
     color: white !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .service-banner .breadcrumb-item+.breadcrumb-item::before,
