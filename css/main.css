@@ -181,7 +181,8 @@ h6 {
     font-size: 1.15rem;
     font-weight: 800;
     letter-spacing: 0.5px;
-    color: var(--primary);
+    color: #0c1a30;
+    /* Changed from yellow to blue as requested */
     text-transform: uppercase;
 }
 
