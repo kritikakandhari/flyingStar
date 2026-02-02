@@ -753,7 +753,7 @@ h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #041e42;
+    background: var(--brand-yellow);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -809,7 +809,7 @@ h6 {
 .loading-dots-simple span {
     width: 10px;
     height: 10px;
-    background-color: white;
+    background-color: var(--secondary);
     border-radius: 50%;
     opacity: 0.6;
     animation: dot-bounce 1.4s infinite ease-in-out both;
