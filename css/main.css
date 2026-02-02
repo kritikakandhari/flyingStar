@@ -327,6 +327,24 @@ h6 {
     }
 }
 
+@keyframes floating {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0);
+    }
+
+    33% {
+        transform: translateY(-15px) translateX(5px) rotate(1deg);
+    }
+
+    66% {
+        transform: translateY(10px) translateX(-5px) rotate(-1deg);
+    }
+
+    100% {
+        transform: translateY(0) translateX(0) rotate(0);
+    }
+}
+
 @keyframes float {
 
     0%,
@@ -482,9 +500,10 @@ h6 {
     color: rgba(255, 255, 255, 0.05);
     font-size: 200px;
     z-index: 1;
-    animation: floating 40s infinite alternate ease-in-out;
+    animation: floating 60s infinite ease-in-out;
     pointer-events: none;
     user-select: none;
+    will-change: transform;
 }
 
 .banner-decor .star {
