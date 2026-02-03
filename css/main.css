@@ -575,8 +575,7 @@ h6 {
     border-radius: var(--radius-lg);
     overflow: hidden;
     position: relative;
-    background: #ffcc00;
-    /* Matching yellow background */
+    background: transparent;
 }
 
 .service-img {
