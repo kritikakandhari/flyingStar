@@ -1179,20 +1179,33 @@ iframe {
     margin-bottom: 0;
 }
 
+html,
+body {
+    overflow-x: hidden;
+    /* Prevent white sidebar/horizontal scroll */
+    max-width: 100%;
+}
+
 @media (max-width: 991px) {
     .hero-v2-slide {
         height: auto;
-        min-height: auto;
-        padding: 120px 0 0;
-        /* Removed bottom padding */
+        min-height: 100dvh;
+        /* Force full screen height on mobile */
+        padding: 100px 0 0;
+        /* Space for navbar */
         text-align: center;
         overflow: hidden;
-        /* Ensure image doesn't overflow if negative margin used */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        /* Push content (image) to bottom */
     }
 
     .hero-v2-content {
-        margin-bottom: 2rem;
-        padding: 0 15px;
+        margin-bottom: auto;
+        /* Push text to top/center, letting image sit bottom */
+        padding: 2rem 15px;
+        /* Add breathing room */
     }
 
     .hero-v2-title {
@@ -1205,11 +1218,16 @@ iframe {
     }
 
     .hero-person-img {
-        max-width: 90%;
+        max-width: 95%;
+        /* Increase width */
         margin-top: 1rem;
-        margin-bottom: -10px;
-        /* Pull image down slightly */
-        display: inline-block;
+        margin-bottom: 0;
+        /* Stick to bottom */
+        display: block;
+        align-self: flex-end;
+        /* Ensure alignment */
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .d-flex.gap-3 {
