@@ -1216,12 +1216,11 @@ body {
     }
 
     .hero-v2-content {
-        margin-bottom: 3rem;
-        /* Increased margin for button clearance */
-        padding: 2rem 15px;
+        margin-bottom: 0;
+        padding: 2rem 15px 4rem 15px;
+        /* Added extra bottom padding for button safety */
         position: relative;
         z-index: 5;
-        /* Ensure content is above other elements */
     }
 
     .hero-v2-title {
