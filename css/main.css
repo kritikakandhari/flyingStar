@@ -1189,8 +1189,8 @@ body {
 @media (max-width: 991px) {
     .hero-v2-slide {
         height: auto;
-        min-height: 100dvh;
-        /* Force full screen height on mobile */
+        min-height: auto;
+        /* Let content dictate height */
         padding: 100px 0 0;
         /* Space for navbar */
         text-align: center;
@@ -1202,8 +1202,8 @@ body {
     }
 
     .hero-v2-content {
-        margin-bottom: auto;
-        /* Push text to top/center, letting image sit bottom */
+        margin-bottom: 2rem;
+        /* Fixed margin instead of auto */
         padding: 2rem 15px;
         /* Add breathing room */
     }
