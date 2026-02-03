@@ -1232,7 +1232,8 @@ body {
     .hero-v2-slide {
         height: auto;
         min-height: auto;
-        padding: 80px 0 0;
+        padding: 50px 0 0;
+        /* Further reduced padding */
         /* Reduced top padding, Removed bottom padding for image flush */
         text-align: center;
         overflow: hidden;
