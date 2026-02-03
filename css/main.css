@@ -1391,7 +1391,13 @@ body {
 
 .preloader {
     background: var(--brand-yellow);
-    /* Changed to Yellow */
+    /* Updated to Vibrant Light Yellow (#FFDE59) */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
