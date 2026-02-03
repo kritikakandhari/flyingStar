@@ -1191,6 +1191,10 @@ iframe {
     mix-blend-mode: multiply;
     display: block;
     margin-bottom: 0;
+    min-height: 800px;
+    /* Ensure minimum height on desktop */
+    padding: 160px 0 220px;
+    /* Increased bottom padding to prevent hiding buttons */
 }
 
 html,
