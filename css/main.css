@@ -19,7 +19,7 @@
     /* Gradients (User Provided - Exact RGB) */
     --grad-blue: linear-gradient(135deg, rgb(6, 147, 227) 0%, rgb(155, 81, 224) 100%);
     /* Blue to Purple */
-    --grad-green: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+    --grad-green: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(58, 234, 243) 100%);
     /* Light Green to Vivid Green */
     --grad-yellow: linear-gradient(135deg, rgb(252, 185, 0) 0%, rgb(255, 105, 0) 100%);
     /* Amber to Orange */
@@ -29,15 +29,15 @@
     /* Map Teal to Green for consistency */
     --grad-primary: var(--grad-yellow);
     /* Primary Gradient is Yellow */
-    --primary: #FCB900;
-    /* Match Amber Start */
+    --primary: #FFDE59;
+    /* Updated to Vibrant Light Yellow (User Request) */
 
     /* Backgrounds */
     --bg-primary: #FFFFFF;
-    --bg-secondary: #FFFBE6;
-    --bg-light-yellow: #FFFBE6;
-    /* Light Yellow */
-    --bg-light-yellow: #FFFBE6;
+    --bg-secondary: #FFFCE8;
+    /* Very Light Yellow Tint */
+    --bg-light-yellow: #FFFCE8;
+    --bg-light-yellow: #FFFCE8;
     --bg-white: #FFFFFF;
 
     /* Text Colors */
