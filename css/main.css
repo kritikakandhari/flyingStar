@@ -4,15 +4,13 @@
 
 :root {
     /* Modern Sky Blue & Yellow Theme */
-    --primary: #F7D138;
-    /* Pure Golden Yellow */
+    --primary: #ffc107;
+    /* Updated to Amber Yellow */
     --primary-sky: #2878F5;
-    /* Vibrant Royal Blue */
     --primary-teal: #00BFA5;
-    /* Teal for Gradients */
     --secondary: #0a1d37;
-    /* Deep Navy for contrast */
-    --brand-yellow: #F7D138;
+    --brand-yellow: #ffc107;
+    /* Updated */
     --brand-blue: #2878F5;
     --accent-vibrant: #ff0000;
     --success: #10B981;
@@ -26,16 +24,12 @@
     /* Backgrounds */
     --bg-primary: #FFFFFF;
     --bg-secondary: #FFFDF0;
-    /* Light Creamy Yellow */
     --bg-white: #FFFFFF;
 
     /* Text Colors */
     --text-primary: #1E293B;
-    /* Slate 800 */
     --text-secondary: #64748B;
-    /* Slate 500 */
     --text-muted: #94A3B8;
-    /* Slate 400 */
 
     /* Glassmorphism */
     --glass-bg: rgba(255, 255, 255, 0.7);
@@ -276,11 +270,13 @@ h6 {
 }
 
 .btn-premium:hover {
-    background: #e6af00 !important;
-    border-color: #e6af00 !important;
-    color: #0a1d37 !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 8px 25px rgba(255, 193, 7, 0.6) !important;
+    background: var(--primary) !important;
+    /* Yellow Background */
+    color: var(--secondary) !important;
+    /* Navy Text */
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 193, 7, 0.5);
 }
 
 .btn-outline {
