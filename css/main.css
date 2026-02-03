@@ -1137,7 +1137,8 @@ iframe {
     padding-bottom: 0;
 }
 
-.hero-v2-slide::before {
+/* Gradient removed as per user request */
+/* .hero-v2-slide::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1146,7 +1147,7 @@ iframe {
     height: 100%;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
     z-index: 1;
-}
+} */
 
 .hero-v2-slide .row {
     align-items: flex-end;
@@ -1344,9 +1345,7 @@ body {
 
     .hero-v2-slide {
         height: auto;
-        padding-top: 120px;
-        padding-bottom: 2rem;
-        /* Add padding to stop button clipping */
+        /* Padding handled in main mobile query above */
     }
 
     .hero-feature-grid {
