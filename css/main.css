@@ -1203,17 +1203,16 @@ body {
 @media (max-width: 991px) {
     .hero-v2-slide {
         height: auto;
-        min-height: 800px;
-        /* Ensure minimum height */
-        padding: 160px 0 220px;
-        /* Increased bottom padding to 220px to clear buttons */
+        min-height: auto;
+        /* Revert mobile height */
+        padding: 120px 0 2rem;
+        /* Normal mobile padding */
         text-align: center;
         overflow: hidden;
         display: flex;
-        flex-direction: row;
-        /* Desktop is row */
-        align-items: center;
-        position: relative;
+        flex-direction: column;
+        /* Mobile is column */
+        justify-content: flex-end;
     }
 
     .hero-v2-content {
