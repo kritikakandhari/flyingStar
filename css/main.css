@@ -186,7 +186,7 @@ h6 {
     font-size: 1.15rem;
     font-weight: 800;
     letter-spacing: 0.5px;
-    color: var(--brand-blue);
+    color: var(--secondary);
     text-transform: uppercase;
 }
 
