@@ -1169,6 +1169,46 @@ iframe {
     mix-blend-mode: multiply;
 }
 
+@media (max-width: 991px) {
+    .hero-v2-slide {
+        height: auto;
+        min-height: auto;
+        padding: 120px 0 60px;
+        text-align: center;
+    }
+
+    .hero-v2-content {
+        margin-bottom: 3rem;
+    }
+
+    .hero-v2-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-v2-subtitle {
+        margin: 0 auto 2rem;
+    }
+
+    .hero-person-img {
+        max-width: 80%;
+        margin-top: 2rem;
+    }
+
+    .d-flex.gap-3 {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-v2-title {
+        font-size: 2rem;
+    }
+
+    .hero-person-img {
+        max-width: 100%;
+    }
+}
+
 /* Ensure image container has no background */
 .hero-v2-slide .col-lg-6.text-center {
     background: transparent;
