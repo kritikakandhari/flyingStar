@@ -1336,11 +1336,10 @@ body {
 
     .hero-feature-grid {
         position: relative;
-        margin-top: 0;
+        margin-top: -10px;
+        /* Pull up to attach to image/bg */
         padding-top: 0;
-        /* Remove padding */
         background: transparent;
-        /* Transparent to show underlying color or attach to image */
     }
 }
 
