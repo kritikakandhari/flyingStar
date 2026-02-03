@@ -186,8 +186,7 @@ h6 {
     font-size: 1.15rem;
     font-weight: 800;
     letter-spacing: 0.5px;
-    color: var(--primary);
-    /* High-contrast Yellow */
+    color: var(--brand-blue);
     text-transform: uppercase;
 }
 
