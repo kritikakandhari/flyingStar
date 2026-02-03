@@ -591,6 +591,25 @@ h6 {
     transform: scale(1.1);
 }
 
+/* Service Card Buttons - Blue Theme */
+.service-card .btn-outline {
+    background: var(--brand-blue);
+    color: white;
+    border: 2px solid var(--brand-blue);
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.service-card .btn-outline:hover {
+    background: transparent;
+    color: var(--brand-blue);
+    border-color: var(--brand-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(40, 120, 245, 0.2);
+}
+
 /* Global Service Banner & Banner Animations */
 .service-banner,
 .about-banner,
