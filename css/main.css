@@ -1205,8 +1205,8 @@ body {
         height: auto;
         min-height: 800px;
         /* Ensure minimum height */
-        padding: 160px 0 140px;
-        /* Top padding for navbar, Bottom for feature grid */
+        padding: 160px 0 220px;
+        /* Increased bottom padding to 220px to clear buttons */
         text-align: center;
         overflow: hidden;
         display: flex;
