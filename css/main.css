@@ -1203,16 +1203,17 @@ body {
 @media (max-width: 991px) {
     .hero-v2-slide {
         height: auto;
-        min-height: auto;
-        /* Let content dictate height */
-        padding: 100px 0 0;
-        /* Space for navbar */
+        min-height: 800px;
+        /* Ensure minimum height */
+        padding: 160px 0 140px;
+        /* Top padding for navbar, Bottom for feature grid */
         text-align: center;
         overflow: hidden;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        /* Push content (image) to bottom */
+        flex-direction: row;
+        /* Desktop is row */
+        align-items: center;
+        position: relative;
     }
 
     .hero-v2-content {
