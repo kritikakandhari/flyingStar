@@ -1165,8 +1165,8 @@ iframe {
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.3));
-    /* Use multiply blending to make white background transparent */
-    mix-blend-mode: multiply;
+    /* Transparent PNGs - no blend mode needed */
+    mix-blend-mode: normal;
 }
 
 /* Ensure image container has no background */
