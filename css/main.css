@@ -1232,43 +1232,30 @@ body {
     .hero-v2-slide {
         height: auto;
         min-height: auto;
-        /* Revert mobile height */
-        padding: 120px 0 2rem;
-        /* Normal mobile padding */
+        padding: 80px 0 0;
+        /* Reduced top padding, Removed bottom padding for image flush */
         text-align: center;
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        /* Mobile is column */
         justify-content: flex-end;
     }
 
     .hero-v2-content {
         margin-bottom: 0;
-        padding: 2rem 15px 4rem 15px;
-        /* Added extra bottom padding for button safety */
+        padding: 2rem 15px 1rem 15px;
+        /* Reduced bottom padding */
         position: relative;
         z-index: 5;
     }
 
-    .hero-v2-title {
-        font-size: 2.2rem;
-    }
-
-    .hero-v2-subtitle {
-        margin: 0 auto 1.5rem;
-        font-size: 1rem;
-    }
-
     .hero-person-img {
         max-width: 95%;
-        /* Increase width */
         margin-top: 1rem;
-        margin-bottom: -20px;
-        /* Stick to bottom and remove potential whitespace */
+        margin-bottom: 0;
+        /* Flush with bottom */
         display: block;
         align-self: flex-end;
-        /* Ensure alignment */
         margin-left: auto;
         margin-right: auto;
     }
