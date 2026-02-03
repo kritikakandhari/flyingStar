@@ -3,20 +3,25 @@
    ======================================== */
 
 :root {
-    /* Modern Blue & Yellow Theme */
+    /* Modern Sky Blue & Yellow Theme */
     --primary: #ffc107;
-    /* Core Yellow */
-    --primary-dark: #e6af00;
-    --primary-light: #fff9e6;
+    /* Vibrant Yellow */
+    --primary-sky: #00AEEF;
+    /* Sky Blue */
+    --primary-teal: #00BFA5;
+    /* Teal for Gradients */
     --secondary: #0a1d37;
-    /* Contrast Navy */
-    --accent: #ffc107;
+    /* Deep Navy for contrast */
     --brand-yellow: #ffc107;
+    --brand-blue: #00AEEF;
     --accent-vibrant: #ff0000;
     --success: #10B981;
-    /* Emerald */
     --danger: #DC2626;
-    /* Red for Errors */
+
+    /* Gradients */
+    --grad-blue: linear-gradient(135deg, #00AEEF 0%, #0077B6 100%);
+    --grad-teal: linear-gradient(135deg, #00BFA5 0%, #00796B 100%);
+    --grad-green: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
 
     /* Backgrounds */
     --bg-primary: #FFFFFF;
@@ -876,9 +881,10 @@ h6 {
         width: 100%;
         margin-bottom: 10px;
     }
-}
 
-height: 300px !important;
+    .map-container {
+        height: 300px !important;
+    }
 }
 
 .contact-box {
