@@ -1329,14 +1329,14 @@ body {
     .hero-v2-slide {
         height: auto;
         padding-top: 120px;
-        padding-bottom: 0;
-        /* Removed excess padding */
+        padding-bottom: 2rem;
+        /* Add padding to stop button clipping */
     }
 
     .hero-feature-grid {
         position: relative;
-        margin-top: -10px;
-        /* Pull up to attach to image/bg */
+        margin-top: -20px;
+        /* Stronger pull-up to fix white gap */
         padding-top: 0;
         background: transparent;
     }
