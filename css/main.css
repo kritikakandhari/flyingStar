@@ -1335,10 +1335,10 @@ body {
     .hero-feature-grid {
         position: relative;
         margin-top: 0;
-        /* Reset margin */
-        padding-top: 2rem;
-        background: var(--bg-primary);
-        /* Ensure it has background */
+        padding-top: 0;
+        /* Remove padding */
+        background: transparent;
+        /* Transparent to show underlying color or attach to image */
     }
 }
 
