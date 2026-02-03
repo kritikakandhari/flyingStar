@@ -4,16 +4,16 @@
 
 :root {
     /* Modern Sky Blue & Yellow Theme */
-    --primary: #FFFF00;
-    /* Pure Yellow */
-    --primary-sky: #00AEEF;
-    /* Sky Blue */
+    --primary: #F7D138;
+    /* Pure Golden Yellow */
+    --primary-sky: #2878F5;
+    /* Vibrant Royal Blue */
     --primary-teal: #00BFA5;
     /* Teal for Gradients */
     --secondary: #0a1d37;
     /* Deep Navy for contrast */
-    --brand-yellow: #FFFF00;
-    --brand-blue: #00AEEF;
+    --brand-yellow: #F7D138;
+    --brand-blue: #2878F5;
     --accent-vibrant: #ff0000;
     --success: #10B981;
     --danger: #DC2626;
