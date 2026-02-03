@@ -1173,25 +1173,33 @@ iframe {
     .hero-v2-slide {
         height: auto;
         min-height: auto;
-        padding: 120px 0 60px;
+        padding: 120px 0 0;
+        /* Removed bottom padding */
         text-align: center;
+        overflow: hidden;
+        /* Ensure image doesn't overflow if negative margin used */
     }
 
     .hero-v2-content {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
+        padding: 0 15px;
     }
 
     .hero-v2-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .hero-v2-subtitle {
-        margin: 0 auto 2rem;
+        margin: 0 auto 1.5rem;
+        font-size: 1rem;
     }
 
     .hero-person-img {
-        max-width: 80%;
-        margin-top: 2rem;
+        max-width: 90%;
+        margin-top: 1rem;
+        margin-bottom: -10px;
+        /* Pull image down slightly */
+        display: inline-block;
     }
 
     .d-flex.gap-3 {
