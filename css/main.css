@@ -1304,3 +1304,61 @@ iframe {
         padding: 1.5rem;
     }
 }
+
+/* ========================================
+   MOBILE FIXES & YELLOW CTA
+   ======================================== */
+
+/* Preloader Responsive Fixes */
+.preloader {
+    background: var(--brand-yellow);
+    /* Changed to Yellow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.airplane-center {
+    width: 120px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.airplane-img {
+    width: 100%;
+    height: auto;
+    animation: flight 2s infinite ease-in-out;
+}
+
+@media (max-width: 576px) {
+    .airplane-center {
+        width: 80px;
+    }
+}
+
+/* CTA Section Yellow Background */
+.bg-yellow-cta {
+    background-color: var(--primary) !important;
+    color: var(--secondary) !important;
+}
+
+.bg-yellow-cta h2,
+.bg-yellow-cta h1,
+.bg-yellow-cta p {
+    color: var(--secondary) !important;
+}
+
+.bg-yellow-cta .btn {
+    background-color: var(--secondary) !important;
+    color: var(--primary) !important;
+    border-color: var(--secondary) !important;
+}
+
+.bg-yellow-cta .btn:hover {
+    background-color: transparent !important;
+    color: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+}
