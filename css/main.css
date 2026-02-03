@@ -1118,7 +1118,9 @@ iframe {
     position: relative;
     overflow: hidden;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    /* Align content to bottom */
+    padding-bottom: 0;
 }
 
 .hero-v2-slide::before {
@@ -1135,6 +1137,8 @@ iframe {
 .hero-v2-content {
     position: relative;
     z-index: 10;
+    padding-bottom: 15vh;
+    /* Push text up to obscure center visually */
 }
 
 .hero-v2-title {
@@ -1159,10 +1163,14 @@ iframe {
 .hero-person-img {
     max-width: 100%;
     height: auto;
+    max-height: 85vh;
+    /* Prevent it from being too tall */
     object-fit: contain;
     filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.3));
     /* Blend mode ensures white background becomes transparent */
     mix-blend-mode: multiply;
+    display: block;
+    margin-bottom: 0;
 }
 
 @media (max-width: 991px) {
