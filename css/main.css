@@ -16,16 +16,26 @@
     --success: #10B981;
     --danger: #DC2626;
 
-    /* Gradients (Vibrant Sky Axis Style) */
-    --grad-blue: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%);
-    /* Bright Sky Blue */
-    --grad-teal: linear-gradient(135deg, #00BFA5 0%, #00796B 100%);
-    --grad-green: linear-gradient(135deg, #10B981 0%, #059669 100%);
-    /* Vibrant Emerald */
+    /* Gradients (User Provided - Exact RGB) */
+    --grad-blue: linear-gradient(135deg, rgb(6, 147, 227) 0%, rgb(155, 81, 224) 100%);
+    /* Blue to Purple */
+    --grad-green: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+    /* Light Green to Vivid Green */
+    --grad-yellow: linear-gradient(135deg, rgb(252, 185, 0) 0%, rgb(255, 105, 0) 100%);
+    /* Amber to Orange */
+
+    /* Mapped Variables */
+    --grad-teal: var(--grad-green);
+    /* Map Teal to Green for consistency */
+    --grad-primary: var(--grad-yellow);
+    /* Primary Gradient is Yellow */
+    --primary: #FCB900;
+    /* Match Amber Start */
 
     /* Backgrounds */
     --bg-primary: #FFFFFF;
     --bg-secondary: #FFFBE6;
+    --bg-light-yellow: #FFFBE6;
     /* Light Yellow */
     --bg-light-yellow: #FFFBE6;
     --bg-white: #FFFFFF;
