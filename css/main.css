@@ -575,7 +575,7 @@ h6 {
     border-radius: var(--radius-lg);
     overflow: hidden;
     position: relative;
-    background: transparent;
+    background: #ffcc00;
 }
 
 .service-img {
@@ -1157,6 +1157,13 @@ iframe {
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.3));
+    background: transparent;
+    mix-blend-mode: normal;
+}
+
+/* Ensure image container has no background */
+.hero-v2-slide .col-lg-6.text-center {
+    background: transparent;
 }
 
 /* Feature Grid at Bottom of Hero */
