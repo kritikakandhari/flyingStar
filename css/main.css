@@ -1191,10 +1191,34 @@ iframe {
     mix-blend-mode: multiply;
     display: block;
     margin-bottom: 0;
-    min-height: 800px;
-    /* Ensure minimum height on desktop */
-    padding: 160px 0 220px;
-    /* Increased bottom padding to prevent hiding buttons */
+}
+
+/* Desktop Hero Slide Layout */
+@media (min-width: 992px) {
+    .hero-v2-slide {
+        display: flex;
+        align-items: flex-end !important;
+        /* Force items to bottom */
+        padding-bottom: 0 !important;
+        /* Remove padding so image touches edge */
+        min-height: 800px;
+        padding-top: 100px;
+    }
+
+    .hero-v2-content {
+        align-self: center !important;
+        /* Keep text centered */
+        padding-bottom: 15rem !important;
+        /* Push text up to clear stats bar */
+    }
+
+    .hero-person-img {
+        width: auto;
+        max-height: 85vh;
+        /* Limit height */
+        margin-bottom: -5px;
+        /* Ensure contact */
+    }
 }
 
 html,
