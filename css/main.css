@@ -17,11 +17,11 @@
     --danger: #DC2626;
 
     /* Gradients (User Provided - Exact RGB) */
-    --grad-blue: linear-gradient(135deg, rgb(6, 147, 227) 0%, rgb(155, 81, 224) 100%);
+    --grad-blue: linear-gradient(135deg, rgb(66, 186, 255) 0%, rgb(155, 81, 224) 100%);
     /* Blue to Purple */
-    --grad-green: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(58, 234, 243) 100%);
+    --grad-green: linear-gradient(135deg, rgb(0, 251, 255) 0%, rgb(7, 216, 0)00%);
     /* Light Green to Vivid Green */
-    --grad-yellow: linear-gradient(135deg, rgb(252, 185, 0) 0%, rgb(255, 105, 0) 100%);
+    --grad-yellow: linear-gradient(135deg, #ffeebf 0%, rgb(255, 105, 0) 100%);
     /* Amber to Orange */
 
     /* Mapped Variables */
