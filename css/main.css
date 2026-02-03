@@ -21,7 +21,7 @@
     /* Blue to Purple */
     --grad-green: linear-gradient(135deg, rgb(83, 252, 255) 0%, rgb(86, 255, 103) 100%);
     /* Light Green to Vivid Green */
-    --grad-yellow: linear-gradient(135deg, #fafa70 0%, rgb(255, 105, 0) 100%);
+    --grad-yellow: linear-gradient(135deg, #fab570 0%, rgb(255, 42, 0) 100%);
     /* Amber to Orange */
 
     /* Mapped Variables */
