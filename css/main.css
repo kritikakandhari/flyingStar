@@ -1221,8 +1221,8 @@ body {
         max-width: 95%;
         /* Increase width */
         margin-top: 1rem;
-        margin-bottom: 0;
-        /* Stick to bottom */
+        margin-bottom: -20px;
+        /* Stick to bottom and remove potential whitespace */
         display: block;
         align-self: flex-end;
         /* Ensure alignment */
